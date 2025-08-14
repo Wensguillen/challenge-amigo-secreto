@@ -3,16 +3,19 @@
 </h2> Sobre el desafio</h2>  
 
 
-Se creo esta aplicación la cual permite a los usuarios ingresar nombres de amigos en una lista para luego realizar un sorteo aleatorio y determinar quién es el "amigo secreto". 
-El usuario deberá agregar nombres y al finalizar, dar clic en el botón "Sortear Amigo" el sistema seleccionará uno de los nombres de forma aleatoria, mostrando el resultado en pantalla.
+Esta aplicación permite a los usuarios ingresar nombres de sus amigos en una lista para luego realizar un sorteo aleatorio y determinar quién es el "amigo secreto". 
+ 
 
-</h2> Funcionalidades:</h2>
+</h2> Cómo funciona?</h2>
 
+Ingresa el nombre en el campo de texto. 
 
-Agregar nombres: Los usuarios escribirán el nombre de un amigo en un campo de texto y lo agregarán a una lista visible al hacer clic en "Adicionar".
+Si el campo de texto está vacío o con números, el programa mostrará una alerta pidiendo un nombre válido. 
 
-Validar entrada: Si el campo de texto está vacío, el programa mostrará una alerta pidiendo un nombre válido.
+Los nombres ingresados aparecerán en una lista debajo del campo de entrada. 
 
-Visualizar la lista: Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
+Para continuar añadiendo amigos, dar clic en el botón "Añadir" 
 
-Sorteo aleatorio: Mostrando el resultado en la pantalla 
+Cuando esten todos los nombres ingresados hacer clic en "Sortear" el sistema seleccionará uno de los nombres de forma aleatoria.
+
+El resultado se mostrará en la pantalla.
