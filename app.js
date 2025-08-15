@@ -1,5 +1,5 @@
 //====================================================
-// Este array se usará para almacenar los nombres de los amigos que el usuario añade.
+// // Este array se usará para almacenar los nombres de los amigos que el usuario añade.
 let listaDeAmigos = []; 
 
 // =================================================== 
@@ -109,3 +109,4 @@ botonParaReiniciarJuego.addEventListener('click', reiniciarJuego);
 // una vez que la página HTML esté completamente cargada,
 // para que la lista se muestre correctamente al principio (vacía).
 document.addEventListener('DOMContentLoaded', actualizarListaDeAmigos);
+//PRUEBA FINAL DE CAMBIOS
