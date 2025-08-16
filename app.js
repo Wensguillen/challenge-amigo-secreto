@@ -1,8 +1,5 @@
 
-// El principal objetivo de este desafío es fortalecer tus habilidades en lógica de programación. Aquí deberás desarrollar la lógica para resolver el problema.
-
-//====================================================
-// // Este array se usará para almacenar los nombres de los amigos que el usuario añade.
+// Este array se usará para almacenar los nombres de los amigos que el usuario añade.
 let listaDeAmigos = []; 
 
 // =================================================== 
@@ -83,10 +80,10 @@ function realizarSorteo() {
 }
 
 // ===================================================
-// Implementar una función para reiniciar el juego  
+// Implementar una función para reiniciar el juego
 function reiniciarJuego() {
     listaDeAmigos = []; 
-    campoDeEntradaNombre.value = ''; 
+    campoDeEntradaNombre.value = '';
     actualizarListaDeAmigos(); 
 
     // Ocultamos la sección del ganador y volvemos a mostrar la sección para añadir nombres.
@@ -112,5 +109,5 @@ botonParaReiniciarJuego.addEventListener('click', reiniciarJuego);
 // una vez que la página HTML esté completamente cargada,
 // para que la lista se muestre correctamente al principio (vacía).
 document.addEventListener('DOMContentLoaded', actualizarListaDeAmigos);
-//PRUEBA FINAL DE CAMBIOS
+
 
