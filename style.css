@@ -1,4 +1,3 @@
-
 :root {
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
@@ -161,50 +160,14 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
-=======
-:root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+
+/* Clase para ocultar elementos, usada por JavaScript */
+.hidden {
+    display: none !important; /* !important asegura que esta regla tenga prioridad */
 }
 
-/* Estilos generales */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-}
-
-/* Banner */
-.header-banner {
-    flex: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0 0;
-}
-
-/* Sección de entrada */
-.input-section {
+/* Estilos para la sección del ganador y el nombre sorteado */
+#seccion-ganador {
     flex: 60%;
     background-color: var(--color-secondary);
     border: 1px solid #000;
@@ -216,111 +179,130 @@ body {
     width: 100%;
 }
 
-/* Títulos */
-.main-title {
-    font-size: 48px;
+.sorted-name {
     font-family: "Merriweather", serif;
+    font-size: 48px;
     font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
-}
-
-.section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+    color: var(--color-button); /* Usando el color del botón para el nombre ganador */
     text-align: center;
-}
-
-/* Contenedores de entrada y botón */
-.input-wrapper {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    max-width: 600px;
     margin-top: 20px;
 }
 
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-.button-container {
-    width: 300px;
-    justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-/* Estilos de botón */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-}
-
-.button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
-}
-
-.button-add:hover {
-    background-color: #a1a1a1;
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-}
-
-/* Botón de sortear título */
-.button-draw {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+.button-restart {
+    background-color: var(--color-primary);
     color: var(--color-white);
-    background-color: var(--color-button);
-    font-size: 16px;
+    margin-top: 30px;
 }
 
-.button-draw img {
-    margin-right: 40px;
+.button-restart:hover {
+    background-color: #3a57e6; /* Un tono más oscuro del color primario */
 }
 
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+/* Estilos para el contenedor de la lista de participantes */
+.name-list-container {
+    width: 100%;
+    max-width: 600px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-tertiary);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.name-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px; /* Limita la altura para scroll si hay muchos nombres */
+    overflow-y: auto; /* Agrega scroll si los nombres exceden la altura */
+}
+
+.name-list li {
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--color-tertiary);
+    font-size: 1.1em;
+    color: var(--color-text);
+}
+
+.name-list li:last-child {
+    border-bottom: none; /* Elimina la línea en el último elemento */
+}
+
+/* Media Queries para Responsive Design */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 36px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+
+    .header-banner {
+        padding: 20px 0 0;
+    }
+
+    .input-section {
+        padding: 15px;
+    }
+
+    .input-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-name {
+        border-radius: 25px;
+        margin-bottom: 10px;
+        width: 80%; /* Ajuste de ancho para mobile */
+    }
+
+    .button-add {
+        border-radius: 25px;
+        width: 80%; /* Ajuste de ancho para mobile */
+    }
+
+    .button-container {
+        width: 80%;
+    }
+
+    .button-draw {
+        padding: 10px 20px;
+        font-size: 14px;
+        justify-content: center;
+    }
+
+    .button-draw img {
+        margin-right: 10px;
+    }
+
+    #seccion-ganador {
+        padding: 15px;
+    }
+
+    .sorted-name {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-title {
+        font-size: 30px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .input-name,
+    .button-add,
+    .button-draw,
+    .button-restart {
+        width: 90%; /* Mayor ancho para pantallas más pequeñas */
+    }
+
+    .sorted-name {
+        font-size: 30px;
+    }
 }
